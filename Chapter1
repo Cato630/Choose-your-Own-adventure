@@ -1,0 +1,65 @@
+#chapter 1
+import time
+import sys
+import threading
+
+#create scrolling rule
+def print_scroll(text):
+    for char in text:
+        sys.stdout.write(char)
+        sys.stdout.flush()
+        time.sleep(0.01)
+        if input_thread.is_alive():
+            break
+def wait_for_enter():xxxxxxxxxcvvvvvvvvvvvvvvv
+    input_thread.join()
+input_thread = threading.Thread(target=wait_for_enter)
+input_thread.start()
+
+introduction = ('''
+As the carriage lurches forward, you're jolted awake from a deep slumber. Your head spins, and your brain feels foggy, as if it's been wrapped in a thick layer of mist. You try to remember where you are and why you're there, but your memories seem to be shrouded in a haze.
+
+You look out the window, and the fog-covered forest slowly passes by, like a ghostly procession. The trees seem to loom over the carriage, their branches like skeletal fingers reaching out to snatch at the curtains. You shiver, despite the warmth of the carriage, and try to shake off the feeling of unease that's settling in.
+
+Your gaze falls upon a letter sitting in your lap, and you pick it up, hoping it might hold some answers. The parchment is worn and creased, but the seal on the envelope is still intact. You break the seal and unfold the letter, and a faint scent of old parchment wafts up.
+
+The letter is from Eldrin, the elder of Stonehaven, and it's addressed to the guild. As you read the words, your memories begin to return, like fragments of a puzzle falling into place. Eldrin has been researching the Whispering Woods, a place of dark legend and ancient power, and he believes he's made a discovery that could change everything.
+
+But there's something more, something that's been happening in the village. The townspeople have all started having dreams, and what's odd is that the dreams all seem to be the same. They're filled with visions of an unblinking eye, watching and waiting. 
+                
+Eldrin is convinced that this is more than just a coincidence, and that something is stirring in the woods, something that could threaten the very fabric of reality.
+
+As you finish reading the letter, the carriage slows to a stop, and you hear the sound of the driver calling out to the horses. You look out the window, and see that you've arrived at the edge of the forest. The trees seem to be waiting for you, their branches like skeletal fingers reaching out to snatch at the curtains.
+
+You take a deep breath, feeling a sense of trepidation wash over you. You know that you're about to embark on a journey into the unknown, a journey that could change everything. But you're ready, or at least, you think you are. You've been trained for this, and you're not going to let a little thing like fear hold you back.
+
+Sucesfully helping Elder Eldrin would put your name in a favorable light with the guild, and you need that in order to move your way up the ranks.
+
+You step out of the carriage, and into the unknown. The forest looms before you, like a dark and foreboding presence. But you're not alone. You have the letter, and the knowledge that you're not just fighting for yourself, but for the people of Stonehaven, and for the future of the world.
+
+You''')
+
+print_scroll(introduction)
+#create loop for the first iterations of choices
+while True:
+    
+    print('''As the Carriage pulls off down the road, you look at the forest.
+    You see the town in front of the forest and know that Eldrins study is only a short walk into the forest.
+    Do you go directly to Eldrin to report that you have arrrieved? Or do you decide to go into the town and get a feel for the people of the village?''')
+    print("Do you: ")
+    print("A) Go to Eldrin")
+    print("B) Go into the town")
+    print("C) Chase down the Carriage driver in fear and return to the guild.")
+
+    choice = input("Enter your chioce (A,B,C): ")
+    if choice.upper() == "A":
+        print("You decide to head to Eldrin's study. As you walk, the trees seem to close in around you, casting long, ominous shadows on the ground.")
+        break
+    elif choice.upper() == "B":
+        print("You decide to head into the town. As you walk, you notice that the towns inhabitants look at you with an air of supision. Everyone Seems on edge.")
+        break
+    elif choice.upper() == "C":
+        print("You chace down the driver of the carriage and get back in. A shiver run downs your spine as you close your eyes in relief")
+        continue
+    else:
+        print("invalid choice. Please try again.")

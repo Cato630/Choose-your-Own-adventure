@@ -1,0 +1,33 @@
+#Class Proficenies
+import random
+classes = {
+    "Bard": {
+        "Performance" : 3,
+        "Persuasion" : 5,
+        "Deception" : 5,
+        "History" : 2,
+
+    },
+    "Cleric": {
+        "Insight" : 4,
+        "Medicine" : 4,
+        "Religion" : 5,
+        "Persuasion" : 2,
+    },
+    "Fighter": {
+        "Athletics": 5,
+        "Intimidation": 2,
+        "Survival": 4,
+    },
+}
+
+def check_proficiencies(class_name):
+    return classes.get(class_name, {})
+
+#skill check roll
+
+def skill_check(class_name, skill):
+    proficiences = get_proficiencies(class_name)
+    proficiency_bonus = proficiences.get(skill, 0)
+    roll = random.randint(1, 20)
+    return roll + proficiency_bonus
